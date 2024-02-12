@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /submit/
+Disallow: /images/
+Disallow: /css/
+Disallow: /js/
+Disallow: /fr/
+Disallow: /banner/
+Disallow: /about/
+Disallow: /portfolio/
+Disallow: /blog/
+Disallow: /service/
+Disallow: /contact/
+Disallow: /tags/
+Disallow: /call-to-action/
+Disallow: /plugins/
+Disallow: /categories/
+Disallow: /call-to-action/
+
+Sitemap: https://mimoun-jakhrouti.github.io/en/sitemap.xml
+Sitemap: https://mimoun-jakhrouti.github.io/sitemap.xml
