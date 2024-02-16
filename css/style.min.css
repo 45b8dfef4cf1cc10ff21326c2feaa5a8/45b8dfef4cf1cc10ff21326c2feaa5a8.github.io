@@ -384,6 +384,11 @@ body {
 .introduction {
   font-size: 60px;
   font-weight: 600;
+  pointer-events: auto;
+}
+
+.animated-text {
+  pointer-events: auto;
 }
 
 .typist-blink:after {
@@ -408,6 +413,7 @@ body {
   padding: 5px 18px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  pointer-events: auto;
 }
 
 .head-holder .hireMe:hover {
