@@ -373,7 +373,6 @@ body {
   font-family: 'CircularStd-Medium', sans-serif !important;
   font-weight: 300;
   z-index: 10;
-  pointer-events: none;
 }
 
 .head-holder {
@@ -384,11 +383,6 @@ body {
 .introduction {
   font-size: 60px;
   font-weight: 600;
-  pointer-events: auto;
-}
-
-.animated-text {
-  pointer-events: auto;
 }
 
 .typist-blink:after {
@@ -413,7 +407,6 @@ body {
   padding: 5px 18px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  pointer-events: auto;
 }
 
 .head-holder .hireMe:hover {
@@ -947,7 +940,7 @@ input:checked+label span:last-child {
   color: #6f6f6f;
   text-align: center;
   letter-spacing: 4px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -1023,10 +1016,37 @@ input:checked+label span:last-child {
 /* ========= Start Summary ======= */
 
 /* ========= Start Experience / Education ======= */
+.experience,
+.education {
+  background: #fff;
+  padding: 40px 0px;
+}
 
-.experience-skill,
-.education-skill {
-    margin-top: 40px;
+.experience-heading,
+.education-heading, {
+  position: relative;
+}
+
+.experience-heading h1,
+.education-heading h1 {
+  color: #6f6f6f;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.experience-heading h1:before,
+.education-heading h1:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 70px;
+  height: 5px;
+  background: #6f6f6f;
 }
 
 .summary h3,
@@ -1114,68 +1134,90 @@ i.fas.fa-map-marker-alt {
 
 /* ========= Start Skill ======= */
 
-.skill-progress-bar {
-  margin-top: 15px;
-}
-
-.skillbar {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 30px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
+.skill {
   background: #fff;
-  border: 2px solid #6f6f6f;
-  height: 18px;
-  border-radius: 22px;
-  -moz-border-radius: 22px;
-  -webkit-border-radius: 22px;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-  -webkit-transition-property: width, background-color;
-  transition-property: width, background-color;
+  padding: 40px 0px;
 }
 
-.no-js .first-skill {
-  width: 98%;
+.skill-heading {
+  position: relative;
 }
 
-.no-js .second-skill {
-  width: 85%;
+.skill-heading h1 {
+  color: #6f6f6f;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
-.no-js .third-skill {
-  width: 92%;
+.skill-heading h1:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 70px;
+  height: 5px;
+  background: #6f6f6f;
 }
 
-.no-js .fourth-skill {
-  width: 60%;
+.marquee {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 30px;
+  overflow: hidden;
+  user-select: none;
 }
 
-.skillbar-title,
-.skill-bar-percent {
-  font-size: 16px;
-  color: #4d4d4d;
-  display: inline-block;
-  margin-bottom: 5px;
+.marquee-group {
+  display: flex;
+  flex-direction: row;
+  max-width: fit-content;
 }
 
-.skill-bar-percent {
-  float: right;
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  min-width: 100%;
 }
 
-.skillbar-bar {
-  height: 10px;
-  margin: 0px 2px;
-  width: 0px;
-  background: #4d4d4d;
-  border-radius: 22px;
-  -moz-border-radius: 22px;
-  -webkit-border-radius: 22px;
+.marquee-content svg {
+  width: 70px;
+  height: 70px;
+  margin-right: 70px;
+}
+
+#marqueeContent1,
+#marqueeContent3 {
+  animation: scroll-left 30s linear infinite;
+}
+
+#marqueeContent2 {
+  animation: scroll-right 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100%));
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(calc(0));
+  }
 }
 
 /*--------------------------------
@@ -1199,7 +1241,7 @@ i.fas.fa-map-marker-alt {
   color: #6f6f6f;
   text-align: center;
   letter-spacing: 4px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -1219,12 +1261,13 @@ i.fas.fa-map-marker-alt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   position: relative;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 30px;
-  padding-bottom: 40px;
+  margin: 10px 0;
+  padding: 10px 0;
 }
 
 .service-img {
@@ -1236,11 +1279,11 @@ i.fas.fa-map-marker-alt {
   width: 100%;
 }
 
+.content {
+  text-align: justify;
+}
+
 .service-label {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100px;
   text-align: center;
   letter-spacing: -0.5px;
   font-size: 19px;
@@ -1319,6 +1362,7 @@ i.fas.fa-map-marker-alt {
   color: #6f6f6f;
   text-align: center;
   letter-spacing: 4px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -2238,34 +2282,19 @@ button.clicked svg path {
     flex-wrap: wrap;
   }
 
-  .education-skill {
-    margin-top: 10px;
-  }
-
   .experience-chart,
-  .education-chart,
-  .skill-progress-bar {
+  .education-chart{
     margin-top: 25px;
   }
 
   .skill {
     margin-top: 30px;
   }
-
-  .skillbar {
-    margin-bottom: 15px;
-  }
 }
 
 @media (min-width:601px) and (max-width: 991px) {
   .about-me {
     padding: 125px 0px 35px 0px;
-  }
-}
-
-@media (max-width: 600px) {
-  .about-me {
-    padding: 70px 0px 0px 0px;
   }
 }
 
@@ -2298,7 +2327,7 @@ button.clicked svg path {
 
 @media (max-width: 475px) {
   .services-heading h1 {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 }
 
