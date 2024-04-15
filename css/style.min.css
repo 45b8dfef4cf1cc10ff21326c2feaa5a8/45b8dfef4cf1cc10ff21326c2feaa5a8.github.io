@@ -383,6 +383,7 @@ body {
 .introduction {
   font-size: 60px;
   font-weight: 600;
+  text-align: left;
 }
 
 .typist-blink:after {
@@ -1176,6 +1177,7 @@ i.fas.fa-map-marker-alt {
 .marquee-group {
   display: flex;
   flex-direction: row;
+  gap: 2rem;
   max-width: fit-content;
 }
 
@@ -1190,7 +1192,7 @@ i.fas.fa-map-marker-alt {
 .marquee-content svg {
   width: 70px;
   height: 70px;
-  margin-right: 70px;
+  margin: 0 35px;
 }
 
 #marqueeContent1,
@@ -1281,6 +1283,7 @@ i.fas.fa-map-marker-alt {
 
 .content {
   text-align: justify;
+  color: #6f6f6f;
 }
 
 .service-label {
@@ -1407,6 +1410,7 @@ i.fas.fa-map-marker-alt {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-left: 0;
+  gap: 0.5rem 0;
 }
 
 .no-flexbox .portfolio-navigation {
@@ -1418,7 +1422,7 @@ i.fas.fa-map-marker-alt {
   padding: 7px 14px;
   border: 1.5px solid #6f6f6f;
   color: #6f6f6f;
-  margin: 0 5px;
+  margin-right: 5px;
   border-radius: 0 !important;
   background-color: transparent;
 }
@@ -2255,6 +2259,13 @@ button.clicked svg path {
 /*--------------------------------
   Start About Me
 ----------------------------------*/
+
+@media (max-width: 580px) {
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
 
 @media (max-width: 767px) {
   .about-me-text {
