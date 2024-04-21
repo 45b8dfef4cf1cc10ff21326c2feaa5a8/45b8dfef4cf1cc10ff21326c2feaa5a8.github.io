@@ -61,8 +61,8 @@ customSelects.forEach(select => {
   });
 
   // Set "Open Sans" as default font
-  const defaultFont = "'Open Sans', sans-serif";
-  selectBtn.textContent = 'Open Sans';
+  const defaultFont = "'Raleway', sans-serif";
+  selectBtn.textContent = 'Raleway';
   setFontFamily(defaultFont);
 });
 
