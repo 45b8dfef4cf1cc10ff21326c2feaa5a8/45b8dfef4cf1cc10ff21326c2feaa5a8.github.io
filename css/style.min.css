@@ -373,13 +373,13 @@ body {
   font-family: 'CircularStd-Medium', sans-serif !important;
   font-weight: 300;
   z-index: 10;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .head-holder {
   display: table-cell;
   vertical-align: middle;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .introduction {
