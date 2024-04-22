@@ -379,11 +379,13 @@ body {
 .head-holder {
   display: table-cell;
   vertical-align: middle;
+  pointer-events: auto;
 }
 
 .introduction {
   font-size: 60px;
   font-weight: 600;
+  text-align: left;
   pointer-events: auto;
 }
 
