@@ -1,4 +1,5 @@
 function generateMatrix() {
+    document.querySelector(".instructions").style.display = "none";
     var rows = parseInt(document.getElementById('rows').value);
     var cols = parseInt(document.getElementById('cols').value);
     var container = document.getElementById('matrix-container');
@@ -67,7 +68,7 @@ function generateMatrix() {
     errorIcon.setAttribute('viewBox', '0 0 24 24');
     errorIcon.setAttribute('fill', '#f87171');
     var errorPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    errorPath.setAttribute('d', 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8zm0-12c-.56 0-1 .45-1 1v6c0 .55.45 1 1 1s1-.45 1-1V9c0-.55-.45-1-1-1z');
+    errorPath.setAttribute('d', 'M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27zM19 14.9L14.9 19H9.1L5 14.9V9.1L9.1 5h5.8L19 9.1zm-4.17-7.14L12 10.59L9.17 7.76L7.76 9.17L10.59 12l-2.83 2.83l1.41 1.41L12 13.41l2.83 2.83l1.41-1.41L13.41 12l2.83-2.83z');
     errorIcon.appendChild(errorPath);
 
     var errorMessageText = document.createTextNode('Please fill all input fields with valid numbers.');
