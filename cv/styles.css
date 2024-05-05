@@ -29,6 +29,11 @@ body {
   width: 110px;
 }
 
+.font-selector label {
+  font-size: 13px;
+  margin-right: 10px;
+}
+
 .font-selector select {
   display: none; /* Hide the original select element */
 }
