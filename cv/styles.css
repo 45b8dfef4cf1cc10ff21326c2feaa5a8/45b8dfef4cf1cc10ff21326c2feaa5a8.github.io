@@ -26,7 +26,7 @@ body {
 .font-selector {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .font-selector label {
