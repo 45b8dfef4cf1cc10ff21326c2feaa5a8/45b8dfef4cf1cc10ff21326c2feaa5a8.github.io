@@ -25,7 +25,7 @@ body {
 /* Custom Select Dropdown */
 .font-selector {
   position: relative;
-  display: none;
+  display: flex;
   width: 110px;
 }
 
@@ -89,7 +89,7 @@ body {
 }
 /* Color Selector */
 .color-selector {
-  display: none;
+  display: flex;
   flex-wrap: nowrap;
   align-items: center;
   height: 40px;
