@@ -217,15 +217,14 @@ function getStrategies(rows, cols) {
                 }
             }
         }
-        
-        if (allInputsFilled) {
-            errorSpan.style.display = 'none'; 
-            return { player1Sets: player1Sets, player2Sets: player2Sets };
-        }
-    }
 
-    errorSpan.style.display = 'flex';
-    return null;
+        errorSpan.style.display = 'none'; 
+        return { player1Sets: player1Sets, player2Sets: player2Sets };
+        
+    } else {
+        errorSpan.style.display = 'flex';
+        return null;
+    }
 }
 
 
