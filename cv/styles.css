@@ -26,6 +26,7 @@ body {
 .font-selector {
   position: relative;
   display: flex;
+  align-items: center;
   width: 110px;
 }
 
