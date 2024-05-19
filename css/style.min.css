@@ -1276,8 +1276,9 @@ i.fas.fa-map-marker-alt {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 10px 0;
+  margin: 10px;
   padding: 10px 0;
+  color: #000;
 }
 
 .service-img {
