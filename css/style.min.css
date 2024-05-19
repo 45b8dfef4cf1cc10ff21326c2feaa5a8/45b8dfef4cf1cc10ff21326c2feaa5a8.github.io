@@ -1287,6 +1287,7 @@ i.fas.fa-map-marker-alt {
 
 .services-icon img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .content {
@@ -1298,6 +1299,7 @@ i.fas.fa-map-marker-alt {
   text-align: center;
   letter-spacing: -0.5px;
   font-size: 19px;
+  color: #ffffff;
 }
 
 .need-service {
@@ -2273,6 +2275,12 @@ button.clicked svg path {
     margin-right: 0;
     margin-left: 0;
   }
+}
+
+@media (min-width: 576px) {
+    .col-sm-4 {
+        flex: 0 0 30% !important;
+    }
 }
 
 @media (max-width: 767px) {
