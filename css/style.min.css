@@ -1,5 +1,4 @@
 @font-face{font-family:"CircularStd-Medium";font-display:swap;src:url(https://www.mimounjakhrouti.com/plugins/fonts/CircularStd-Medium.woff2) format("woff2"),url(https://www.mimounjakhrouti.com/plugins/fonts/CircularStd-Medium.ttf) format("truetype")}
-
 /* ---- base ---- */
 
 ::-webkit-scrollbar {
@@ -34,8 +33,8 @@ body {
 
 
 canvas{
-  display:block;
-  vertical-align:bottom;
+  display: block;
+  vertical-align: bottom;
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -1040,6 +1039,10 @@ time.experience-time {
   font-size: 0.8rem;
 }
 
+time.education-time {
+  font-size: 0.9rem;
+}
+
 .experience-time,
 .education-time {
   position: relative;
@@ -1051,6 +1054,7 @@ time.experience-time {
   padding: 0 5px;
   white-space: nowrap;
   text-align: center;
+  align-content: center;
   border: 1px solid;
   border-radius: 9999px;
   background-color: rgb(51, 51, 51);
@@ -1234,6 +1238,16 @@ ul.education-list h4 {
   Start Services
 ----------------------------------*/
 
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  /* margin-right: -15px; */
+  /* margin-left: -15px; */
+}
+
 .services {
   background: #f8fafc;
   padding: 70px 0px;
@@ -1273,8 +1287,9 @@ ul.education-list h4 {
   -ms-flex-align: center;
   align-items: center;
   margin: 10px;
-  padding: 20px 0;
+  padding: 40px 0;
   background-color: #ffffff;
+  border: 1px solid transparent;
   border-radius: 5px;
   box-shadow:  0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
@@ -1296,8 +1311,11 @@ ul.education-list h4 {
 
 .content-cv {
   background: #ffffff;
+  border: 1px solid transparent;
   border-radius: 5px;
   box-shadow:  0 0 #0000,  0 0 #0000, 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  background-image: repeating-linear-gradient(#eee 0 1px, transparent 1px 100%), repeating-linear-gradient(90deg, #eee 0 1px, transparent 1px 100%);
+  background-size: 20px 20px;
 }
 
 .content-cv:hover {
@@ -1306,9 +1324,14 @@ ul.education-list h4 {
 }
 
 .content {
+  font-family: 'Caveat', cursive;
   text-align: justify;
-  color: #6f6f6f;
+  color: #000;
   padding: 20px;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-style: normal;
 }
 
 .service-label {
@@ -1318,62 +1341,7 @@ ul.education-list h4 {
   color: #000;
 }
 
-.need-service {
-  width: 100%;
-  background: #313131;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  text-align: center;
-}
-
-.overlay {
-  position: relative;
-}
-
-.overlay::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.need-service h1 {
-  position: relative;
-  color: #fff;
-  margin: 0;
-  font-size: 40px;
-  letter-spacing: 2px;
-  z-index: 2;
-}
-
-.need-service a {
-  position: relative;
-  z-index: 2;
-  text-decoration: none;
-  color: #313131;
-  font-weight: bold;
-  font-size: 17px;
-  margin-top: 14px;
-  display: inline-block;
-  background: #f8fafc;
-  padding: 10px 19px;
-  border-radius: 25px;
-  transition: background 0.5s;
-}
-
-.need-service a:hover {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  padding: 8px 17px;
-}
-
+.
 /*--------------------------------
  End Services
 ----------------------------------*/
@@ -2194,19 +2162,6 @@ button.clicked svg path {
   Start About Me
 ----------------------------------*/
 
-@media (max-width: 580px) {
-  .row {
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 576px) {
-    .col-sm-4 {
-        flex: 0 0 30% !important;
-    }
-}
-
 @media (max-width: 767px) {
   .about-me-text {
     display: block;
@@ -2236,10 +2191,6 @@ button.clicked svg path {
   .experience-list,
   .education-list{
     margin-top: 25px;
-  }
-
-  .skill {
-    margin-top: 30px;
   }
 }
 
@@ -2290,7 +2241,23 @@ button.clicked svg path {
 
 @media (max-width: 767px) {
   .services {
-    padding: 70px 0px 0px 0px;
+    padding: 70px 0px 35px 0px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .col-sm-4 {
+    ms-flex: 0 0 auto !important;
+    flex: 0 0 auto !important;
+    max-width: 44.9% !important;
+  }
+}
+
+@media (min-width: 768px){
+  .col-lg-4 {
+    ms-flex: 0 0 auto !important;
+    flex: 0 0 auto !important;
+    max-width: 29.5% !important;
   }
 }
 
@@ -2305,41 +2272,6 @@ button.clicked svg path {
   End Portfolio
 ----------------------------------*/
 
-/*--------------------------------
-   Start Testimonials
-----------------------------------*/
-
-@media(max-width: 380px) {
-  .single-testimonial p {
-    width: 80%;
-  }
-}
-
-@media (max-width: 991px) {
-  .fun-facts {
-    justify-content: space-around;
-  }
-
-  .fun-fact-holder {
-    margin-bottom: 40px;
-  }
-}
-
-@media (min-width:766px) and (max-width: 991px) {
-  .testimonials {
-    padding: 70px 0px 35px 0px;
-  }
-}
-
-@media (max-width: 767px) {
-  .testimonials {
-    padding: 70px 0px 0px 0px;
-  }
-}
-
-/*--------------------------------
-  End Testimonials
-----------------------------------*/
 
 /*--------------------------------
   Start Contact
